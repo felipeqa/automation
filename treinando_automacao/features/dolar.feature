@@ -6,6 +6,7 @@ Funcionalidade: Buscar Cotação Dolar
  Quero pesquisar a cotação do dolar
  Para verificar se o valor do dolar é menor que 3,20
 
+  @Dolar
   Cenario: Comparar Valor do dolar
    Dado que busco no Google pelo site do UOL
    Quando acesso a pagina de economia
