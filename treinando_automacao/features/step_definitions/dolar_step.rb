@@ -1,4 +1,4 @@
-Dado(/^que busco no Google pelo site do UOL$/) do
+  Dado(/^que busco no Google pelo site do UOL$/) do
   visit "https://bing.com.br"
   fill_in('sb_form_q', :with => 'uol melhor conteudo')
   click_button('sb_form_go')
@@ -17,7 +17,7 @@ Quando(/^busco a cotação do dolar$/) do
     sleep 3
     expect(page).to have_selector(:xpath,'//*[@id="header-menu"]/ul/li[2]/div/ul/li[3]/a', visible: true)# check that menu is shown (need to have rspec for this)
     sleep 5
-    find(:xpath,'//*[@id="header-menu"]/ul/li[2]/div/ul/li[3]/a').click
+     find(:xpath,'//*[@id="header-menu"]/ul/li[2]/div/ul/li[3]/a').click
     sleep 3
     @dolar_atual = find(:xpath, '//*[@id="conteudo-principal"]/div[1]/div[2]/div[1]/table/tbody/tr/td[3]').text
     puts @dolar_atual
@@ -28,8 +28,8 @@ Então(/^comparo se o valor é menor que "([^"]*)"$/) do |dolar|
     @dolar_previsto = dolar
     puts @dolar_previsto
     if @dolar_atual.to_f < @dolar_previsto.to_f
-      puts true 
+        puts true 
     else
-      puts false
+        puts false
     end
 end
