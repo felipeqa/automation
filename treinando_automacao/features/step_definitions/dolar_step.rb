@@ -16,18 +16,21 @@ Quando(/^busco a cotação do dolar$/) do
     find(:css,'#header-menu > ul > li:nth-child(2) > a').hover
     sleep 3
     expect(page).to have_selector(:xpath,'//*[@id="header-menu"]/ul/li[2]/div/ul/li[3]/a', visible: true)# check that menu is shown (need to have rspec for this)
-    sleep 5
+    sleep 3
      find(:xpath,'//*[@id="header-menu"]/ul/li[2]/div/ul/li[3]/a').click
     sleep 3
-    @dolar_atual = find(:xpath, '//*[@id="conteudo-principal"]/div[1]/div[2]/div[1]/table/tbody/tr/td[3]').text
-    puts @dolar_atual
-
+    @dolar_atual = find(:xpath, '//*[@id="conteudo-principal"]/div[1]/div[2]/div[1]/table/tbody/tr/td[3]').text    
 end
 
 Então(/^comparo se o valor é menor que "([^"]*)"$/) do |dolar|
     @dolar_previsto = dolar
+
     puts @dolar_previsto
-    if @dolar_atual.to_f < @dolar_previsto.to_f
+    puts @dolar_atual.gsub(',','.').to_f
+
+ 
+
+    if @dolar_atual.gsub(',', '.').to_f < @dolar_previsto.to_f
         puts true 
     else
         puts false

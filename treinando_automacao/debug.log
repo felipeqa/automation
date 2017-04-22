@@ -40,3 +40,9 @@
 [0417/222212.779:ERROR:process_info.cc(625)] range at 0xfee49000, size 0xf84 fully unreadable
 [0417/222212.779:ERROR:process_info.cc(625)] range at 0xfed1f000, size 0xf84 fully unreadable
 [0417/222212.779:ERROR:process_info.cc(625)] range at 0xfed1c000, size 0xf84 fully unreadable
+[0421/000134.491:ERROR:process_info.cc(343)] VirtualQueryEx: Acesso negado. (0x5)
+[0421/000134.492:ERROR:process_info.cc(564)] ReadMemoryInfo failed
+[0421/000134.494:ERROR:process_reader_win.cc(142)] SuspendThread: Acesso negado. (0x5)
+[0421/000134.494:ERROR:exception_snapshot_win.cc(87)] thread ID 3724 not found in process
+[0421/000134.494:WARNING:crash_report_exception_handler.cc(60)] ProcessSnapshotWin::Initialize failed
+[0421/000134.494:ERROR:scoped_process_suspend.cc(38)] NtResumeProcess: Tentou-se acessar um processo de saída.  (0xc000010a)
